@@ -1,0 +1,55 @@
+  <!-- Page Content -->
+
+    <div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h1 class="page-header">Bill
+                <small>Insert bill ID</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li class="active">Insert</li>
+            </ol>
+        </div>
+
+    <div class="row">
+
+        <div class="col-sm-8">
+        <h1>Please Insert Bill ID</h1>
+
+          <ul>
+            <li ng-repeat="bill in bills">{{bill.billId}} : {{bill.billMarkers}}</li>
+        </ul>
+
+			<!-- Submit button -->
+			<form action="/billId" method="post" name="bill">
+				<input type="text" ng-model="string" name="billId" ng-minlength="10" ng-maxlength="10" required>
+                <button ng-disabled="bill.$invalid" ng-click="sendDataToServer()">Submit</button>
+			</form>
+      		</div>
+        </div>	
+    </div>
+    <!-- /.row -->
+
+
+               <div class="row">
+        <div class="page-title">
+          </div>
+          <button class="btn btn-success" ng-click="refreshMap()">Refresh Map</button>
+          <button class="btn btn-success" ng-click="getMapInstance()">Show all Markers</button>
+          <button class="btn btn-success" ng-click="genGeoMarker()">Current Location</button>
+          <button class="btn btn-success" ng-click="genPolyRoute()">Gen Route</button>
+          <button class="btn btn-danger" ng-click="sendDataToServer()">Post</button>
+
+        </div>
+
+
+           <div class="row">
+
+      <div id="map" ui-map="model.map" class="map" ui-options="mapOptions">
+
+      </div>
+
+</div><!-- /.container

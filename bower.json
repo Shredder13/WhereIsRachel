@@ -1,0 +1,19 @@
+{
+  "name": "wir",
+  "version": "0.0.0",
+  "authors": [
+    "yafim <ifim.vo@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-google-maps": "~2.2.0",
+    "bootstrap": "~3.3.5"
+  }
+}

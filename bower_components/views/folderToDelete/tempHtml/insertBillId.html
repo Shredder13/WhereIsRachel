@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css"  /> 
+
+	<title>Insert Bill Id</title>
+</head>
+
+<body>
+
+<div class="container">
+	<h1>Plese Insert Bill Id</h1>
+
+	<!-- Print the coordinates -->
+	<ul>
+		<% for (var i = 0; i < items.length; i++) { %>
+			<li><%= "Bill Id:" +  items[i].billId + " Markers: " %>
+			<% for (var j = 0; j < items[i].billMarkers.length; j++) { %> 
+				<%="(" + items[i].billMarkers[j].currentLocation.lat +"," + items[i].billMarkers[j].currentLocation.lng + ")" %>
+			<% } %>
+			</li> 
+		<% } %>
+	</ul>
+
+	<!-- Submit button -->
+	<form action="/billId" method="post">
+		<input type="text" name="billId">
+		<input type="submit" value="Submit">
+	</form>
+
+	</div>
+
+		<script src="jquery/dist/jquery.js"></script>
+		<script src="bootstrap/dist/js/bootstrap.js"></script>
+
+</body>
+</html>

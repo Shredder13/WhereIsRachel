@@ -1,0 +1,108 @@
+
+<div  align="center">
+    <div class="card hovercard">
+        <div class="card-background">
+            <img class="card-bkimg" alt="" src="http://lorempixel.com/100/100/people/9/">
+            <!-- http://lorempixel.com/850/280/people/9/ -->
+        </div>
+        <div class="useravatar">
+            <div class="page-header" ng-show='loggedInUser'>
+                <img class="profile_circular" align="center" ng-src="http://graph.facebook.com/{{loggedInUser['authResponse']['userID']}}/picture?type=large">
+                <!--{{$scope.user}}-->
+                <!--{{loggedInUser.name}}-->
+            </div>        </div>
+        <div class="card-info"> <span class="card-title"></span>
+
+        </div>
+    </div>
+    <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <div class="hidden-xs">Rank</div>
+            </button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                <div class="hidden-xs">Number of bills</div>
+            </button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                <div class="hidden-xs">Followers</div>
+            </button>
+        </div>
+    </div>
+
+    <div class="well">
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="tab1">
+                <h3>Your rank is 2/15</h3>
+            </div>
+            <div class="tab-pane fade in" id="tab2">
+                <h3>You have 3 bills</h3>
+            </div>
+            <div class="tab-pane fade in" id="tab3">
+                <h3>Followers:</h3>
+                <div class="useravatar">
+                    <div class="page-header" ng-show='loggedInUser'>
+                        <img class="profile_circular" ng-src="http://graph.facebook.com/{{loggedInUser['authResponse']['userID']}}/picture?type=large">
+                        <!--{{$scope.user}}-->
+                        <!--{{loggedInUser.name}}-->
+                    </div>        </div>
+                <div class="useravatar">
+                    <div class="page-header" ng-show='loggedInUser'>
+                        <img class="profile_circular"  ng-src="http://graph.facebook.com/1087824791229041/picture?type=large">
+                        <!--{{$scope.user}}-->
+                        <!--{{loggedInUser.name}}-->
+                    </div>        </div>
+                <div class="useravatar">
+                    <div class="page-header" ng-show='loggedInUser'>
+                        <img class="profile_circular"  ng-src="http://graph.facebook.com/10207401464933022/picture?type=large">
+                        <!--{{$scope.user}}-->
+                        <!--{{loggedInUser.name}}-->
+                    </div>        </div>
+                <!--<div class=""> <span class="card-title"></span>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div></div>
+
+
+
+<!--<section class='marginTop' style="text-align: center" >-->
+    <!--<div>-->
+        <!--&lt;!&ndash;<h1>Welcome {{loggedInUser['authResponse']['name']}}<h1>&ndash;&gt;-->
+    <!--<h2>Welcome dude</h2>-->
+    <!--</div>-->
+
+    <!--<div class="page-header" ng-show='loggedInUser'>-->
+        <!--<img class="profile_circular" align="center" ng-src="http://graph.facebook.com/{{loggedInUser['authResponse']['userID']}}/picture?type=large">-->
+        <!--{{$scope.user}}-->
+        <!--{{loggedInUser.name}}-->
+    <!--</div>-->
+
+    <!--<div class='margin-left' ng-show='loggedInUser.name'>-->
+        <!--<div>Hello, {{loggedInUser.name}}!</div>-->
+    <!--</div>-->
+
+    <!--<div class='margin-left' ng-show='loggedInUser.name'>-->
+        <!--<div>Hello, {{loggedInUser.name}}!</div>    </div>-->
+
+    <!--<script>-->
+
+    <!--</script>-->
+    <!--<div class="page-header">-->
+        <!--{{$scope.user}}-->
+
+    <!--</div>-->
+     <!--<pre>-->
+    <!--Joined since: 11.9.2015-->
+    <!--Number of bills: 5-->
+         <!--&lt;!&ndash;json:&ndash;&gt;-->
+    <!--&lt;!&ndash;{{loggedInUser['authResponse']}}&ndash;&gt;-->
+  <!--</pre>-->
+<!--</section>-->

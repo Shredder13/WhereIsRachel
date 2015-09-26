@@ -1,0 +1,70 @@
+  <!-- Page Content -->
+
+    <div class="container" ng-init="getDataFromServer()">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h1 class="page-header">Bill
+                <small>Insert bill id</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li class="active">Insert</li>
+            </ol>
+        </div>
+
+    <div class="row">
+
+        <div class="col-sm-8">
+        <h1>Please Insert Bill Id</h1>
+            <li ng-repeat="bill in fakeDB">
+                Facebook id from ngcontroller pageCtrl:
+             <!--Get the facebook Id-->
+                <div ng-controller="PageCtrl">
+                    {{loggedInUser['authResponse']['userID']}}
+                    </ul>
+                </div>
+
+                Facebook id from property variable: {{fbId}} <br>
+
+                <div ng-controller="MapController">
+                    Facebook id from ngcontroller mapcontroller: {{fbId}} <br>
+
+                </div>
+
+                after: {{bill.billID}} : {{bill.places}}</li>
+        </ul>
+
+      <!-- Submit button -->
+                      Enter Bill ID and hit enter:
+    <form name="submitForm" ng-submit="submit()">
+
+
+
+<div style="overflow: hidden; padding-right: .5em;">
+
+        <!-- <input type="text" ng-model="text" name="text" ng-minlength="10" ng-maxlength="10" required /> -->
+        <input type="text" name="text" ng-model="text" placeholder="Bill Id" ng-minlength="10" ng-maxlength="10" required ng-pattern="onlyNumbers" style="float: left" />
+
+        <input ng-disabled="submitForm.$invalid" type="submit" id="submit" value="Check-In"  />
+
+</div>
+        <div role="alert">
+            <span ng-show="submitForm.text.$error.minlength || submitForm.text.$error.maxlength || submitForm.text.$error.pattern" style="color:red"><b>Bill Id should be exactly 10 digit length</b></span>
+                
+        </div>
+
+    </form>
+
+      </div>
+        </div>
+    </div>
+    <!-- /.row -->
+   <div class="row">
+
+      <div id="map" ui-map="model.map" class="map" ui-options="mapOptions">
+
+    </div>
+
+</div><!-- /.container

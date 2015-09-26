@@ -1,0 +1,30 @@
+    <div class="container">
+            <div class="row">
+				<div class="page-title">
+					<h2>angular-google-maps: <span ng-cloak>{{version}}</span>, google-maps: <span ng-cloak>{{googleVersion}}</span></h2>
+					</div>
+					<button class="btn btn-danger" ng-click="removeMarkers()">Clear Map</button>
+					<button class="btn btn-success" ng-click="refreshMap()">Refresh Map</button>
+					<button class="btn btn-success" ng-click="getMapInstance()">Show all Markers</button>
+					<button class="btn btn-success" ng-click="genGeoMarker()">Current Location</button>
+					
+					<button class="btn btn-success" ng-click="genPolyRoute()">Gen Route</button>
+
+
+					<button class="btn btn-danger" ng-click="sendDataToServer()">Post</button>
+
+				</div>
+
+
+           <div class="row">
+
+			<div id="map" ui-map="model.map" class="map" ui-options="mapOptions"></div>
+
+	        <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]"></div>
+
+
+
+
+            </div>
+    </div>
+<!-- /.container -->

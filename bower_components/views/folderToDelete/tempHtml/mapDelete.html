@@ -1,0 +1,17 @@
+<html ng-app="angular-map">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css"  /> 
+
+		<script src="./assets/scripts/controllers/angularMapController.js"></script>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs7C0NGcrkrDFvqrqH8_nzbwz1BrZIr4Y&sensor=true"></script>
+		
+		<script type="text/javascript" src="./angular-google-maps/dist/angular-google-maps.js"></script>
+	</head>
+	<body ng-controller="MainCtrl">
+		<google-map center="map.center" zoom="map.zoom">
+
+		</google-map>
+	</body>
+</html>

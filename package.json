@@ -1,0 +1,9 @@
+{
+"name": "wir-project",
+"version": "1.0.0",
+"dependencies":
+{
+"express": "~4.10.2",
+"ejs": "~1.0.0"
+}
+}
